@@ -1,0 +1,61 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 16rem));
+    gap: 2rem;
+    justify-content: center;
+  }
+  
+.card {
+    overflow: hidden;
+    box-shadow: 0 2px 20px gray;
+    border-radius: radius;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: transform 200ms ease-in;
+    margin-top: 10rem;
+    height: auto;
+}
+
+.card__image {
+    height: 10rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card__title {
+    padding: 1rem;
+    font-size: 1.5vw;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.card__description {
+    padding: 0 1rem;
+    margin-left: 0.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card__btn {
+    padding: 1rem;
+    width: auto;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 1rem;
+    border: 2px solid #d35656;
+    background: transparent;
+    color: #d35656;
+    border-radius: 0.2rem radius;
+    transition: background 200ms ease-in, color 200ms ease-in;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card__btn:hover {
+    background: #d35656;
+    color: aliceblue;
+    cursor: pointer;
+}

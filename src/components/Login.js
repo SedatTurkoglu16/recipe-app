@@ -29,7 +29,7 @@ const Login = ({ setIsAuth }) => {
          <div>
            <h1>Login Page</h1>
           <div className="login-button">
-          <button onClick={signInWithGoogle}>Sign In With Google</button>
+          <button className='signin-button' onClick={signInWithGoogle}>Sign In With Google</button>
           </div>
          </div>
        </div>

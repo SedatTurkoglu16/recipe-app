@@ -13,7 +13,7 @@ nav {
     left: 0;
     width: 80%;
     height: 5rem;
-    background-color: #dbb13ee7;
+    background-color: #33b4bde7;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -21,6 +21,17 @@ nav {
     padding: 0 10%;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
     z-index: 10;
+}
+
+.signout-button {
+    border-radius: 60px;
+    background-color: #383868;
+    color: white;
+    font-size: 20px;
+    border: none;
+    width: 150px;
+    height: 45px;
+    cursor: pointer;
 }
 
 a {

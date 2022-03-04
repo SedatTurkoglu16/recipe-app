@@ -6,6 +6,7 @@ import './App.css';
 import Home from './components/Home';
 import AddRecipe from './components/AddRecipe';
 import Login from './components/Login';
+import RecipePage from './components/RecipePage';
 
 function App() {
   const [isAuth, setIsAuth] = useState(false);
@@ -26,7 +27,7 @@ function App() {
         <Link to="/login"> Login </Link> ) : ( 
           <>
             <Link to="/addRecipe"> AddRecipe </Link>
-            <button onClick={signUserOut}> Log Out </button>
+            <button className='signout-button' onClick={signUserOut}> Log Out </button>
           </>
         )}
       </nav>
@@ -34,6 +35,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/createpost' element={<AddRecipe isAuth={isAuth} />} />
         <Route path='/login' element={<Login setIsAuth={setIsAuth} />} />
+        <Route path='/recipes' element={<RecipePage />}/>
       </Routes>
     </Router>
   );

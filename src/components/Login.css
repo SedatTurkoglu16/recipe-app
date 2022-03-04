@@ -59,7 +59,7 @@
       padding-top: 20px;
   }
 
-  button{
+  .signin-button{
       width: 380px;
       height: 50px;
       border-radius: 60px;
