@@ -1,8 +1,8 @@
 import React from 'react'
-import { BrowserRouter as Router, Link, Routes, Route } from 'react-router-dom'
-import RecipePage from './RecipePage'
+import { Link } from 'react-router-dom'
 
 const Card = (props) => {
+  const titleWithNoSpaces = props.title.replace(/ /g, "");
   return (
     <div className="card">
       <div className="card__body">
@@ -10,9 +10,15 @@ const Card = (props) => {
         <h2 className="card__title">{props.title}</h2>
         <p className="card__description">{props.description}</p>
       </div>
-        <Link to={`/${props.title}-recipe`} className="card__btn">View Recipe</Link>
+        <Link onClick={() => { props.setSelectedMeal(
+            { title: props.title, 
+              description: props.description, 
+              recipe: props.recipe,
+              image: props.img 
+            })
+          } 
+        } to={`/${titleWithNoSpaces}-recipe`} className="card__btn">View Recipe</Link>
     </div>
   )
 }
-
 export default Card

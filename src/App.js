@@ -10,6 +10,8 @@ import RecipePage from './components/RecipePage';
 
 function App() {
   const [isAuth, setIsAuth] = useState(false);
+  const [selectedMeal, setSelectedMeal] = useState({ title: '', description: '', image: '', recipe: '' });
+  const [selectedUrl, setSelectedUrl] = useState(null);
 
   const signUserOut = () => {
     signOut(auth).then(() => {
@@ -18,6 +20,8 @@ function App() {
       window.location.pathname = "/login";
     })
   }
+
+  const titleWithNoSpaces = selectedMeal.title.replace(/ /g, "");
 
   return (
     <Router>
@@ -32,10 +36,10 @@ function App() {
         )}
       </nav>
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='/' element={<Home setSelectedUrl={setSelectedUrl} setSelectedMeal={setSelectedMeal} />} />
         <Route path='/createpost' element={<AddRecipe isAuth={isAuth} />} />
         <Route path='/login' element={<Login setIsAuth={setIsAuth} />} />
-        <Route path='/recipes' element={<RecipePage />}/>
+        <Route path={`/${titleWithNoSpaces}-recipe`} element={<RecipePage selectedMeal={selectedMeal} />}/>
       </Routes>
     </Router>
   );
