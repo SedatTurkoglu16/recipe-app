@@ -20,7 +20,7 @@ const AddRecipe = ({ setUsersRecipe }) => {
     })
     navigate("/");
   }
-
+  
   return (
     <div className='createRecipePage'>
       <div className='crContainer'>

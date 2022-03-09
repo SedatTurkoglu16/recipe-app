@@ -49,6 +49,12 @@ nav {
     cursor: pointer;
 }
 
+.profilePic {
+  cursor: pointer;
+  height: 70%;
+  border-radius: 999px;
+}
+
 a {
   text-decoration: none;
   color: rgb(49, 53, 56);

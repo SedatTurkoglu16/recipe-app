@@ -1,10 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&family=Nunito:ital,wght@1,200&family=Work+Sans:wght@300&display=swap');.wrapper {
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&family=Nunito:ital,wght@1,200&family=Work+Sans:wght@300&display=swap');
+.wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(12rem, 16rem));
     gap: 3rem;
     justify-content: center;
-  }
-  
+}
+
+.wrapper2 {
+    display: flex;
+    width: 1040px;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
 .card {
     overflow: hidden;
     box-shadow: 0 2px 20px gray;

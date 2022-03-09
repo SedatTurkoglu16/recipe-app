@@ -30,7 +30,7 @@ function App() {
         <Link to="/login"> Login </Link> ) : ( 
           <>
             <Link to="/addRecipe"> AddRecipe </Link>
-            <button className='signout-button' onClick={signUserOut}> Log Out </button>
+            <img onClick={signUserOut} className='profilePic' src={auth.currentUser.photoURL} alt="pp" />
           </>
         )}
       </nav>
