@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@600&display=swap');
+
 .App {
   text-align: center;
 }
@@ -21,6 +23,19 @@ nav {
     padding: 0 10%;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
     z-index: 10;
+}
+
+.brand {
+  display: flex;
+  font-family: 'Fredoka', sans-serif;
+}
+
+.brand1 {
+  color: #31314b;
+}
+
+.brand2 {
+  color: rgb(168, 79, 79);
 }
 
 .signout-button {

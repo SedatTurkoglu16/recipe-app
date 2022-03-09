@@ -11,7 +11,6 @@ import RecipePage from './components/RecipePage';
 function App() {
   const [isAuth, setIsAuth] = useState(false);
   const [selectedMeal, setSelectedMeal] = useState({ title: '', description: '', image: '', recipe: '' });
-  const [selectedUrl, setSelectedUrl] = useState(null);
 
   const signUserOut = () => {
     signOut(auth).then(() => {
@@ -26,7 +25,7 @@ function App() {
   return (
     <Router>
       <nav>
-        <Link to="/"> <h3>Home</h3> </Link>
+        <Link to="/"><div className='brand'><h3 className='brand1'>FOOD</h3><h3 className='brand2'>DAY</h3></div></Link>
         {!isAuth ? (
         <Link to="/login"> Login </Link> ) : ( 
           <>
@@ -36,10 +35,11 @@ function App() {
         )}
       </nav>
       <Routes>
-        <Route path='/' element={<Home setSelectedUrl={setSelectedUrl} setSelectedMeal={setSelectedMeal} />} />
+        <Route path='/' element={<Home isAuth={isAuth} setSelectedMeal={setSelectedMeal} />} />
         <Route path='/createpost' element={<AddRecipe isAuth={isAuth} />} />
         <Route path='/login' element={<Login setIsAuth={setIsAuth} />} />
-        <Route path={`/${titleWithNoSpaces}-recipe`} element={<RecipePage selectedMeal={selectedMeal} />}/>
+        <Route path='/addRecipe' element={<AddRecipe/>} ></Route>
+        <Route path={`/${titleWithNoSpaces}-recipe`} element={<RecipePage isAuth={isAuth} selectedMeal={selectedMeal} />}/>
       </Routes>
     </Router>
   );

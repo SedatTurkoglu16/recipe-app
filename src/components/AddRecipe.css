@@ -1,0 +1,61 @@
+.createRecipePage {
+    width: 100%;
+    height: calc(100vh - 80px);
+    display: grid;
+    place-items: center;
+  }
+  
+  .crContainer {
+    margin-top: 5rem;
+    width: 500px;
+    height: auto;
+    padding: 20px;
+    background-color: rgb(99, 104, 131);
+    border-radius: 12px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .crContainer h1 {
+    text-align: center;
+  }
+  
+  .crContainer label {
+    font-size: 25px;
+  }
+  .crContainer .inputRecipe {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .inputRecipe input,
+  .inputRecipe textarea {
+    font-size: 18px;
+    border: none;
+    border-radius: 2px;
+    padding: 5px;
+  }
+  
+  .inputRecipe input {
+    height: 40px;
+    width: auto;
+  }
+
+  .inputRecipe textarea {
+    height: 150px;
+  }
+  
+  .crContainer button {
+    margin-top: 20px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  input,
+  textarea {
+    margin-top: 5px;
+  }
