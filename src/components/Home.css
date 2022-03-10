@@ -8,7 +8,7 @@
 
 .wrapper2 {
     display: flex;
-    width: 1040px;
+    width: 100%;
     flex-wrap: wrap;
     box-sizing: border-box;
     justify-content: center;

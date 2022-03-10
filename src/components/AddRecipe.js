@@ -16,7 +16,7 @@ const AddRecipe = ({ setUsersRecipe }) => {
       title,
       recipe,
       url,
-      author: { name: auth.currentUser.displayName, id: auth.currentUser.uid }
+      author: { name: auth.currentUser.displayName, id: auth.currentUser.uid, pp_image:auth.currentUser.photoURL }
     })
     navigate("/");
   }

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { auth, db } from '../firebase-config';
+import { db } from '../firebase-config';
 import { collection, onSnapshot } from 'firebase/firestore';
 import Card from './Card'
 import './Home.css'
@@ -10,7 +10,6 @@ const Home = ({ setSelectedUrl, setSelectedMeal, isAuth }) => {
   const [usersRecipes, setUsersRecipes] = useState([]);
   const mealsCollectionRef = collection(db, "meals")
   const usersRecipesCollectionRef = collection(db, "mealsFromUsers")
-  const user = auth.currentUser
 
   useEffect(() => {
     onSnapshot(mealsCollectionRef, snapshot => {
@@ -50,7 +49,7 @@ const Home = ({ setSelectedUrl, setSelectedMeal, isAuth }) => {
       <div className='wrapper2'>
       {usersRecipes.map((food) => {
         return(
-          <RecipesFromUsers user={user} isAuth={isAuth} recipe={food.recipe} img={food.url} title={food.title} description={food.description} setSelectedMeal={setSelectedMeal} setSelectedUrl={setSelectedUrl} />
+          <RecipesFromUsers author={food.author} isAuth={isAuth} recipe={food.recipe} img={food.url} title={food.title} description={food.description} setSelectedMeal={setSelectedMeal} setSelectedUrl={setSelectedUrl} />
         )
       })}
       </div>

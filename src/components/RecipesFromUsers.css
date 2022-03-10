@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 .post {
+  margin-top: 4rem;
   margin: 10px;
   background-color: #fff;
   border-radius: 10px;
